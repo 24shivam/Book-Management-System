@@ -120,6 +120,34 @@ The `ControllerExceptionHandler` class ensures graceful handling of exceptions, 
 **Functionality:**
 - Manages data access for transactions, facilitating retrieval of transaction information by ID.
 
+##Models
+Author
+Represents an author in the system. It includes fields like ID, name, email, creation date, and update date. Authors can have multiple books associated with them.
+
+Book
+Represents a book in the system. It includes fields like ID, name, book number, cost, type, and associations with students and authors. Books can have multiple transactions associated with them.
+
+BookType
+An enum representing different types of books (e.g., educational, motivational, sports).
+
+FilterType
+An enum representing different criteria for filtering books and students (e.g., author name, book number, cost, book type, student name, student type, student phone, student address, student email).
+
+Operators
+An enum representing different operators for querying data (e.g., equals, less than, greater than, less than equals, in).
+
+Student
+Represents a student in the system. It includes fields like ID, name, email, phone number, type, address, password, authority, creation date, and update date. Students can have multiple books and transactions associated with them and implement UserDetails for Spring Security.
+
+StudentType
+An enum representing different types of students (e.g., active, inactive, blocked).
+
+Txn
+Represents a transaction in the system. It includes fields like ID, transaction ID, associations with students and books, creation date, update date, paid amount, and transaction status.
+
+TxnStatus
+An enum representing different statuses of a transaction (e.g., issued, returned, fined).
+
 ## Conclusion
 
 The Book Management System offers a comprehensive solution for managing library operations effectively. With its modular architecture, robust functionalities, and integration with Redis for caching, the system provides a reliable platform for libraries and educational institutions to streamline their book management processes. By leveraging Spring Boot's capabilities and adhering to best practices in software development, this system ensures scalability, performance, and ease of maintenance, making it a valuable asset for any organization dealing with book management tasks.
