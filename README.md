@@ -13,6 +13,34 @@ The system adopts a layered architecture to ensure modularity, maintainability, 
 - **Repositories:** Manage data access operations such as CRUD operations and querying the database.
 - **Models:** Define entities representing various domain objects such as books, authors, students, and transactions.
 
+
+## Table of Contents
+
+1. [Project Structure](#project-structure)
+2. [Configuration](#configuration)
+    - [Redis Configuration](#redis-configuration)
+    - [Security Configuration](#security-configuration)
+    - [Swagger Configuration](#swagger-configuration)
+3. [Controllers](#controllers)
+    - [AdminController](#admincontroller)
+    - [BookController](#bookcontroller)
+    - [StudentController](#studentcontroller)
+    - [TxnController](#txncontroller)
+4. [Exception Handling](#exception-handling)
+5. [Services](#services)
+    - [AdminService](#adminservice)
+    - [StudentService](#studentservice)
+    - [TxnService](#txnservice)
+6. [Repositories](#repositories)
+    - [AuthorRepo](#authorrepo)
+    - [BookRepo](#bookrepo)
+    - [BookRedisCacheRepo](#bookrediscacherepo)
+    - [StudentRepo](#studentrepo)
+    - [StudentRedisRepo](#studentrediscacherepo)
+    - [TxnRepo](#txnrepo)
+7. [Models](#models)
+8. [Request DTOs](#request-dtos)
+
 ##Configuration
 
 ### Redis Configuration
@@ -120,32 +148,33 @@ The `ControllerExceptionHandler` class ensures graceful handling of exceptions, 
 **Functionality:**
 - Manages data access for transactions, facilitating retrieval of transaction information by ID.
 
-##Models
-Author
+## Models
+
+### Author
 Represents an author in the system. It includes fields like ID, name, email, creation date, and update date. Authors can have multiple books associated with them.
 
-Book
+### Book
 Represents a book in the system. It includes fields like ID, name, book number, cost, type, and associations with students and authors. Books can have multiple transactions associated with them.
 
-BookType
+### BookType
 An enum representing different types of books (e.g., educational, motivational, sports).
 
-FilterType
+### FilterType
 An enum representing different criteria for filtering books and students (e.g., author name, book number, cost, book type, student name, student type, student phone, student address, student email).
 
-Operators
+### Operators
 An enum representing different operators for querying data (e.g., equals, less than, greater than, less than equals, in).
 
-Student
+### Student
 Represents a student in the system. It includes fields like ID, name, email, phone number, type, address, password, authority, creation date, and update date. Students can have multiple books and transactions associated with them and implement UserDetails for Spring Security.
 
-StudentType
+### StudentType
 An enum representing different types of students (e.g., active, inactive, blocked).
 
-Txn
+### Txn
 Represents a transaction in the system. It includes fields like ID, transaction ID, associations with students and books, creation date, update date, paid amount, and transaction status.
 
-TxnStatus
+### TxnStatus
 An enum representing different statuses of a transaction (e.g., issued, returned, fined).
 
 ## Conclusion
