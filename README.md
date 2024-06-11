@@ -13,6 +13,18 @@ The system adopts a layered architecture to ensure modularity, maintainability, 
 - **Repositories:** Manage data access operations such as CRUD operations and querying the database.
 - **Models:** Define entities representing various domain objects such as books, authors, students, and transactions.
 
+##Configuration
+
+### Redis Configuration
+The Redis configuration sets up the connection to a Redis server, utilizing the LettuceConnectionFactory and RedisTemplate. It specifies the host and port of the Redis server and defines the serializers for keys and values, allowing objects to be stored and retrieved from Redis.
+
+### Security Configuration
+The security configuration defines the authentication and authorization mechanisms for the application. It uses DaoAuthenticationProvider with StudentService for user details and NoOpPasswordEncoder for password encoding. The SecurityFilterChain configures the access rules for different endpoints, specifying which roles can access certain URLs and disabling CSRF protection for simplicity.
+
+### Swagger Configuration
+Swagger is configured to provide API documentation and testing interface. The OpenAPI bean sets up the API title, version, and description. The GroupedOpenApi bean groups endpoints related to books, students, transactions, and admin functionalities for easier navigation in the Swagger UI.
+
+
 ## Controllers
 
 ### AdminController
