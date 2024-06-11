@@ -42,21 +42,8 @@ The system adopts a layered architecture to ensure modularity, maintainability, 
 8. [Request DTOs](#request-dtos)
 
 ## Project Structure
-src/
-├── main/
-│   ├── java/
-│   │   └── in/
-│   │       └── gfg/
-│   │           └── BookManagementSystem/
-│   │               ├── configuration/
-│   │               ├── controller/
-│   │               ├── exception/
-│   │               ├── model/
-│   │               ├── repository/
-│   │               ├── requestDto/
-│   │               └── service/
-│   └── resources/
-│       └── application.properties
+ 
+<img width="301" alt="image" src="https://github.com/24shivam/Book-Management-System/assets/108919507/5de4006e-a5df-44a8-8c33-9566b33109b9">
 
 
 ## Configuration
