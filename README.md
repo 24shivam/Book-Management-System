@@ -41,7 +41,7 @@ The system adopts a layered architecture to ensure modularity, maintainability, 
 7. [Models](#models)
 8. [Request DTOs](#request-dtos)
 
-##Configuration
+## Configuration
 
 ### Redis Configuration
 The Redis configuration sets up the connection to a Redis server, utilizing the LettuceConnectionFactory and RedisTemplate. It specifies the host and port of the Redis server and defines the serializers for keys and values, allowing objects to be stored and retrieved from Redis.
