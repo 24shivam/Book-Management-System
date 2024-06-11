@@ -41,6 +41,24 @@ The system adopts a layered architecture to ensure modularity, maintainability, 
 7. [Models](#models)
 8. [Request DTOs](#request-dtos)
 
+## Project Structure
+src/
+├── main/
+│   ├── java/
+│   │   └── in/
+│   │       └── gfg/
+│   │           └── BookManagementSystem/
+│   │               ├── configuration/
+│   │               ├── controller/
+│   │               ├── exception/
+│   │               ├── model/
+│   │               ├── repository/
+│   │               ├── requestDto/
+│   │               └── service/
+│   └── resources/
+│       └── application.properties
+
+
 ## Configuration
 
 ### Redis Configuration
